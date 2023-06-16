@@ -1,0 +1,490 @@
+body {
+    font-family: "DM Sans", sans-serif;
+    margin: 0;
+
+}
+
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+}
+
+h1 {
+    color: #901C1C;
+}
+
+.main_title {
+    color: #901C1C;
+    margin-right: 100px;
+}
+
+.logo {
+    height: 50px;
+    margin-left: 100px;
+}
+
+
+
+
+
+#contact_modal {
+    display: none;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    z-index: 1;
+
+}
+
+.photograph-header {
+    background-color: #FAFAFA;
+    height: 300px;
+    margin: 0 100px;
+}
+
+
+
+.contact_button {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    padding: 11px;
+    width: 170px;
+    height: 70px;
+    border: none;
+    background-color: #901C1C;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal {
+    border-radius: 5px;
+    background-color: #DB8876;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 35px 35px 35px;
+    margin: auto;
+}
+
+.modal header {
+    justify-content: space-between;
+    width: 100%;
+}
+
+.modal header img {
+    cursor: pointer;
+    width: 35px;
+}
+
+.modal header h2 {
+    font-size: 35px;
+    margin-top: 5px;
+    margin-bottom: 16px;
+    font-weight: normal;
+    text-align: left;
+    padding-right: 15%;
+}
+
+
+form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.labelWhiteSpace {
+    padding-top: 20px;
+}
+
+form label {
+    color: #312E2E;
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: self-start;
+    margin-bottom: 16px;
+}
+
+form input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    padding-left: 8px;
+
+}
+
+.MonMessagePerso {
+    width: 100%;
+    height: 130px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    padding-left: 8px;
+}
+
+
+/* FILTRE */
+
+
+/* Style du bouton */
+.BoutonActionDeroulant {
+    background-color: #901C1C;
+    color: #FFFFFF;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    width: 140px;
+    height: 40px;
+    text-align: left;
+}
+
+
+/* Style du bouton lorsqu'il est survolé */
+.BoutonActionDeroulant:hover {
+    background-color: #d22a00;
+}
+
+/* Style du menu déroulant */
+.menuDeroulant {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    width: 315px;
+    position: relative
+}
+
+
+/* Style du text "trier par" du menu déroulant */
+.triTexte {
+    margin-left: 100px;
+    margin-right: 10px;
+}
+
+/* Style du contenu du menu déroulant */
+.menuDeroulant-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: #901C1C;
+    min-width: 140px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    top: 38px;
+    /* Ajustez la valeur du menu deroulant (soucis FLEX)*/
+    margin-left: 175px;
+}
+
+
+/* Style des liens du menu déroulant */
+.menuDeroulant-content a {
+    color: #FFFFFF;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+
+
+
+
+/* Style des liens du menu déroulant lorsqu'ils sont survolés */
+.menuDeroulant-content a:hover {
+    background-color: #d22a00;
+}
+
+/* Affichage du menu déroulant lorsqu'il est ouvert */
+
+
+.selectionnee {
+    display: none;
+}
+
+.menuDeroulant-content a.selectionnee {
+    display: none;
+}
+
+
+.showMenuAvecFleche {
+    display: block;
+}
+
+/* Style de la flèche */
+.fleche {
+    position: absolute;
+    /* Utilisation de la position absolue */
+    right: 15px;
+    /* Ajuste la position de la flèche */
+    top: 50%;
+    /* Centre verticalement la flèche */
+    transform: translateY(-55%);
+    /* Ajuste la position verticale de la flèche */
+    width: 15px;
+    height: 15px;
+    color: #FFFFFF;
+}
+
+.rotate.fleche {
+    transform: translateY(-55%) rotate(-180deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.phd_card {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    border-radius: 20px;
+    align-items: center;
+}
+
+.contentText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 25%;
+    padding-left: 5%;
+
+}
+
+.contentButton {
+    display: flex;
+    width: auto;
+    height: auto;
+}
+
+.contentPics {
+    display: flex;
+    padding-right: 5%;
+    width: auto;
+    height: auto;
+}
+
+.img_phd {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+
+
+}
+
+
+.phd_title {
+    font-size: 60px;
+    color: #D3573C;
+    width: auto;
+    margin: 0;
+}
+
+.phd_location {
+    color: #901C1C;
+    font-size: 25px;
+
+}
+
+.phd_para {
+    margin-top: -2%;
+
+}
+
+
+.phPhoto {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    padding-top: 5%;
+}
+
+
+.photoCard {
+    display: flex;
+    width: auto;
+    height: auto;
+    padding: 1px 50px 50px 50px;
+    margin-top: 40px;
+    flex-direction: column;
+}
+
+.photoImg {
+    height: 350px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 2%;
+
+}
+
+
+/* MEDIA PHOTOGRAPHE */
+
+
+
+.textLikeDiv {
+    display: flex;
+    width: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: #901C1C;
+}
+
+.textIconeDiv {
+    display: flex;
+    text-align: center;
+    font-size: larger;
+    flex-direction: row;
+    align-items: center;
+}
+
+.textLike {
+    width: auto;
+    margin-right: 10px;
+}
+
+.totalLike {
+    display: flex;
+    background-color: #f7a0a0;
+    position: fixed;
+    border-radius: 5px 5px 0px 0px;
+    bottom: 0px;
+    right: 30px;
+    width: 13%;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.TotalLikeContain {
+    display: flex;
+    width: auto;
+    height: 40px;
+    text-align: center;
+    align-items: center;
+}
+
+.totalLikeText {
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.totalLikeIcone {}
+
+.priceDayPhoto {
+    margin-right: 20px;
+
+}
+
+
+
+
+
+
+
+
+/* POPUP CREATION */
+
+.popup {
+    display: none;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.popup:hover {
+    background: white;
+}
+
+.photoPopup {
+    display: none;
+    width: 50%;
+    height: 60%;
+    object-fit: cover;
+}
+
+.photoPopupDisplay {
+    display: block;
+    width: 50%;
+    height: 60%;
+    object-fit: cover;
+}
+
+.iconeFlech {
+    display: block;
+    width: auto;
+    font-size: 55px;
+    margin: 25px;
+    color: #901C1C;
+}
+
+
+.iconeFlechCroix {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    height: 60%;
+}
+
+.iconeCroix {
+    font-size: 55px;
+    color: #901C1C;
+}
+
+.whiteElementFlech {
+    width: 55px;
+    height: 55px;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
+
+  <!-- Différer l'exécution du script JavaScript jusqu'au chargement complet du HTML (Defer). -->
+  <script src="/scripts/utils/dataFunctions.js" defer></script>
+  <script src="/scripts/utils/detailPhotographe.js" defer></script>
+
+  <!-- Intégration du kit d'icônes dynamique Font Awesome -->
+  <script src="https://kit.fontawesome.com/43f543c243.js" crossorigin="anonymous"></script>
+  <title>Fisheye - photographe </title>
+</head>
+
+<body>
+  <header>
+    <img src="assets/images/logo.png" class="logo" />
+  </header>
+  <main id="main">
+    <div class="photograph-header" id="photograph-header">
+      <button class="contact_button" id="button_phd" aria-label="Bouton de contact" onclick="displayModal()">
+        Contactez-moi
+      </button>
+    </div>
+
+
+
+    <div class="menuDeroulant">
+      <div class="triTexte">Trier par:</div>
+      <button class="BoutonActionDeroulant" aria-label="Trier par popularité">
+        Popularité
+      </button>
+      <span id="flecheIconeMenu" class="fleche fas fa-chevron-down"></span>
+      <div class="menuDeroulant-content">
+
+        <!-- Lien vers "#" avec un attribut "data-value" spécifié pour une utilisation en JS. -->
+        <a href="#" data-value="popularite" aria-label="Trier par popularité">Popularité</a>
+
+        <a href="#" data-value="date" aria-label="Trier par date">Date</a>
+
+        <a href="#" data-value="titre" aria-label="Trier par titre">Titre</a>
+      </div>
+    </div>
+
+
+
+    <div class="phPhoto" id="phPhoto">
+
+    </div>
+    <div class="popup" id="popup"> </div>
+  </main>
+  <div id="contact_modal">
+    <div class="modal">
+      <header>
+        <h2 id="contactTitleID"></h2>
+        <img src="assets/icons/close.svg" onclick="closeModal()" />
+      </header>
+      <form>
+        <div>
+
+          <!-- Gestion du formulaire de contact -->
+          <label>Prénom :</label>
+          <input id="prenom" />
+          <span id="alertPrenom"></span>
+
+          <label>Nom :</label>
+          <input id="nom" />
+          <span id="alertNom"></span>
+
+          <label>Email :</label>
+          <input id="email" />
+          <span id="alertMail"></span>
+
+          <label>Votre message :</label>
+          <textarea id="message" class="MonMessagePerso" aria-label="Votre message"></textarea>
+          <span id="alertMessagePerso"></span>
+        </div>
+        <button class="contact_button" aria-label="Bouton envoyer">Envoyer</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Gestion des likes -->
+  <div class="totalLike">
+    <div class="TotalLikeContain">
+      <p class="totalLikeText" id="totalLikeText"></p>
+      <i id="totalLikeIcone" class=" totalLikeIcone fa-solid fa-heart"></i>
+    </div>
+    <div class="TotalLikeContain">
+      <p id="priceDayPhoto" class="priceDayPhoto"></p>
+    </div>
+  </div>
+  <script src="/scripts/utils/contactForm.js"></script>
+</body>
+
+</html>
